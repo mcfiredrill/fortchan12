@@ -2,3 +2,4 @@
 
 Fortchan12.Router.map ()->
   @resource('posts')
+  @resource('post')
