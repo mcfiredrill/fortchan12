@@ -12,4 +12,6 @@ gem 'sdoc',          group: :doc, require: false
 gem 'spring',        group: :development
 gem 'active_model_serializers'
 gem 'ember-rails'
+gem "ember-data-source", "~> 1.0.0.beta.7"
+gem 'ember-source'
 gem 'rspec-rails', group: [:development, :test]
