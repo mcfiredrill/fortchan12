@@ -1,6 +1,10 @@
-posts
-
-{{#each post in controller}}
-  {{post.name}}
-  {{post.body}}
+<h2>posts</h2>
+{{#each}}
+  {{name}} says
+  {{body}}
+  {{created_at}}
+  {{#link-to 'post' this}}
+    {{id}}
+  {{/link-to}}
+  <br />
 {{/each}}

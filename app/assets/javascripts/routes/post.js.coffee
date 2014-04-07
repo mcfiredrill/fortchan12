@@ -1,3 +1,4 @@
 Fortchan12.PostRoute = Ember.Route.extend
-  model: ->
-    @get('store').find('post')
+  model: (params) ->
+    @get('store').find('post', params.post_id)
+
