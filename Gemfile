@@ -15,3 +15,8 @@ gem 'ember-rails'
 gem "ember-data-source", "~> 1.0.0.beta.7"
 gem 'ember-source'
 gem 'rspec-rails', group: [:development, :test]
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
