@@ -2,5 +2,5 @@
 
 Fortchan12.Router.map ()->
   @resource 'posts', ()->
-    @route('new')
-  @resource 'post', path: '/posts/:post_id'
+    @resource 'post', path: ':post_id'
+    @route 'new'
