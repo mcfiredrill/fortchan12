@@ -1,4 +1,9 @@
 <h2>make a new post</h2>
-<form {{action save on="submit"}}>
-  <button type="submit">
+<form {{action 'create' this on="submit"}}>
+  {{#if isSaving}}
+    <p>saving post...</p>
+  {{/if}}
+  <p>{{input type="text" value=name}}</p>
+  <p>{{textarea value=body}}</p>
+  <button type="submit">Create</button>
 </form>
