@@ -2,7 +2,7 @@
 {{#each}}
   {{name}} says
   {{body}}
-  <img {{bind-attr src="photo_url"}} />
+  <img {{bind-attr src="photo_thumb_url"}} />
   {{created_at}}
   {{#link-to 'post' this}}
     {{id}}
