@@ -20,3 +20,6 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'paperclip', '~> 4.1.1'
+gem 'jquery-fileupload-rails'
