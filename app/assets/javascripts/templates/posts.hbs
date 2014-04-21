@@ -1,5 +1,16 @@
+<h2>make a new post</h2>
+<form {{action 'create' newPost on="submit"}}>
+  {{#if isSaving}}
+    <p>saving post...</p>
+  {{/if}}
+  <p>{{input type="text" value=name}}</p>
+  <p>{{textarea value=body}}</p>
+  <p>{{view Fortchan12.UploadFile name="photo" file=photo}}</p>
+  <button type="submit">Create</button>
+</form>
+
 <h2>posts</h2>
-{{#each}}
+{{#each posts}}
   {{name}} says
   {{body}}
   <img {{bind-attr src="photo_thumb_url"}} />
@@ -9,6 +20,3 @@
   {{/link-to}}
   <br />
 {{/each}}
-<p>{{#link-to 'posts.new'}}Create a new post{{/link-to}}</p>
-<h3>post:</h3>
-{{outlet}}
