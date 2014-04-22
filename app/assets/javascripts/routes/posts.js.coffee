@@ -6,5 +6,12 @@ Fortchan12.PostsRoute = Ember.Route.extend
 
   actions:
     create: (post) ->
+      self = @
       post.setProperties(this.controller.getProperties(['name','body','photo']))
-      post.save()
+      post.save().then ->
+        self.controller.setProperties({name: '', body: '', photo: ''})
+        self.controller.set('newPost', self.get('store').createRecord('post'))
+
+  setupController: (controller, model) ->
+    controller.set('posts', this.get('store').all('post'))
+    controller.set('newPost', model.newPost)
