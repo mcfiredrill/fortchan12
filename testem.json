@@ -1,0 +1,6 @@
+{
+  "framework": "qunit",
+  "launch_in_dev": ["PhantomJS"],
+  "launch_in_ci": ["PhantomJS"],
+  "test_page": "tests.html"
+}
