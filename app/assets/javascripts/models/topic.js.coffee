@@ -1,2 +1,2 @@
 Fortchan12.Topic = DS.Model.extend
-  posts: DS.hasMany 'post'
+  posts: DS.hasMany 'post', async: true

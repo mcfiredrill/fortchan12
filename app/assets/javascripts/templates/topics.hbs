@@ -1,0 +1,11 @@
+<h2>topics</h2>
+
+{{#each topic in controller}}
+  {{#each post in topic.posts}}
+    {{post.name}} says
+    {{post.body}}
+    <img {{bind-attr src="post.photo_thumb_url"}} />
+    {{post.created_at}}
+    <br />
+  {{/each}}
+{{/each}}

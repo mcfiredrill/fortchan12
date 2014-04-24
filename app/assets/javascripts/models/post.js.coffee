@@ -7,4 +7,4 @@ Fortchan12.Post = DS.Model.extend
   photo_thumb_url: DS.attr 'string'
   photo: DS.attr 'string'
   createdAt: DS.attr 'moment'
-  topic: DS.belongsTo 'topic'
+  topic: DS.belongsTo 'topic', async: true
