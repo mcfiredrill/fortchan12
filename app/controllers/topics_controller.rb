@@ -11,4 +11,8 @@ class TopicsController < ApplicationController
   def create
     respond_with Topic.create
   end
+
+  def update
+    respond_with Topic.find(params[:id]).touch
+  end
 end

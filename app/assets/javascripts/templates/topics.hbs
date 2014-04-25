@@ -11,14 +11,18 @@
 </form>
 
 {{#each topic in reversedTopics}}
-  {{#each post in topic.posts}}
-    {{post.name}} says
-    {{post.body}}
-    <img {{bind-attr src="post.photo_thumb_url"}} />
-    {{post.created_at}}
-    <br />
-  {{/each}}
-  {{#link-to 'topic' topic}}
-    Reply
-  {{/link-to}}
+  <div class="topic">
+    {{#each post in topic.posts}}
+      {{post.name}} says
+      {{post.body}}
+      <img {{bind-attr src="post.photo_thumb_url"}} />
+      {{post.created_at}}
+      <br />
+    {{/each}}
+    {{#link-to 'topic' topic}}
+      Reply
+    {{/link-to}}
+  </div>
+  <br style="clear:both;" />
+  <hr />
 {{/each}}
