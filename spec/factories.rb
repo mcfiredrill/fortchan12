@@ -14,6 +14,5 @@ FactoryGirl.define do
   end
 
   factory :topic do
-    created_at '2014-01-01 01:10:10'
   end
 end
