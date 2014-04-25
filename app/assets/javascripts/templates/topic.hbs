@@ -1,5 +1,4 @@
-<h1>topics</h1>
-<h2>make a new topic</h2>
+<h2>reply</h2>
 <form {{action 'create' newPost on="submit"}}>
   {{#if isSaving}}
     <p>saving post...</p>
@@ -10,15 +9,10 @@
   <button type="submit">Create</button>
 </form>
 
-{{#each topic in controller}}
-  {{#each post in topic.posts}}
-    {{post.name}} says
-    {{post.body}}
-    <img {{bind-attr src="post.photo_thumb_url"}} />
-    {{post.created_at}}
-    <br />
-  {{/each}}
-  {{#link-to 'topic' topic}}
-    Reply
-  {{/link-to}}
+{{#each post in posts}}
+  {{post.name}} says
+  {{post.body}}
+  <img {{bind-attr src="post.photo_thumb_url"}} />
+  {{post.created_at}}
+  <br />
 {{/each}}
