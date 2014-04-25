@@ -1,4 +1,8 @@
 Fortchan12.TopicsController = Ember.ArrayController.extend
+  reversedTopics: (->
+    @get('topics').sortBy('updatedAt').toArray().reverse()
+  ).property('topics.[]')
+
   actions:
     create: (post) ->
       post.setProperties(@getProperties(['name','body','photo']))

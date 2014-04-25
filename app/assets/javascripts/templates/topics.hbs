@@ -10,7 +10,7 @@
   <button type="submit">Create</button>
 </form>
 
-{{#each topic in controller}}
+{{#each topic in reversedTopics}}
   {{#each post in topic.posts}}
     {{post.name}} says
     {{post.body}}
