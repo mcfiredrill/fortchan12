@@ -77,4 +77,13 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  Paperclip::Attachment.default_options.merge!({
+    storage: :s3,
+    s3_credentials: {
+      access_key_id: ENV['S3_KEY'],
+      secret_access_key: ENV['S3_SECRET']
+    },
+    s3_bucket: 'fortchan12'
+  })
 end
