@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 begin
+  # what's spring?
+  # its uh an preload
+  # a pretoaster
+  # :P
   load File.expand_path("../spring", __FILE__)
+ #ok..
 rescue LoadError
 end
 APP_PATH = File.expand_path('../../config/application',  __FILE__)
