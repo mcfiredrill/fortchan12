@@ -1,6 +1,6 @@
 fortchan12
 ==========
-[![Build Status](https://img.shields.io/travis/mcfiredrill/fortchan12.svg?branch=master)](http://travis-ci.org/mcfiredrill/forttree)
+[![Build Status](https://img.shields.io/travis/mcfiredrill/fortchan12.svg?branch=master)](http://travis-ci.org/mcfiredrill/fortchan12)
 
 lost decade
 
