@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'factory' do
+    it 'is valid from the factory' do
+      FactoryGirl.build(:post).should be_valid
+    end
+  end
 end
