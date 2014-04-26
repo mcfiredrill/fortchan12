@@ -21,7 +21,8 @@ group :production do
 end
 
 group :development, :test do
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'pry-remote'
   gem 'sqlite3'
   gem 'rspec-rails'
 end
