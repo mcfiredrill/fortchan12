@@ -1,10 +1,15 @@
 Fortchan12.TopicsController = Ember.ArrayController.extend
+  name: null
+  body: null
+  photo: null
+
   reversedTopics: (->
     @get('topics').sortBy('updatedAt').toArray().reverse()
   ).property('topics.[]')
 
   actions:
-    create: (post) ->
+    create: ->
+      post = @get('store').createRecord('post')
       post.setProperties(@getProperties(['name','body','photo']))
 
       topic = @get('store').createRecord('topic')
@@ -17,8 +22,6 @@ Fortchan12.TopicsController = Ember.ArrayController.extend
           name: ''
           body: ''
           photo: ''
-
-        @set('newPost', @get('store').createRecord('post'))
 
         post.set('topic', topic)
         post.save()
