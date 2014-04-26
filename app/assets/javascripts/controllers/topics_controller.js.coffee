@@ -19,9 +19,9 @@ Fortchan12.TopicsController = Ember.ArrayController.extend
       topic.save().then =>
 
         @setProperties
-          name: ''
-          body: ''
-          photo: ''
+          name: null
+          body: null
+          photo: null
 
         post.set('topic', topic)
         post.save()

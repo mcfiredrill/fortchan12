@@ -1,9 +1,12 @@
 Fortchan12.TopicController = Ember.ObjectController.extend
+  name: null
+  body: null
+  photo: null
+
   actions:
-    create: (post) ->
+    create: ->
+      post = @get('store').createRecord('post')
       post.setProperties(@getProperties(['name','body','photo']))
-      console.log(@)
-      console.log(@get('content'))
 
       topic = @get('content')
       topic.get('posts').then (posts) ->
@@ -12,11 +15,9 @@ Fortchan12.TopicController = Ember.ObjectController.extend
       topic.save().then =>
 
         @setProperties
-          name: ''
-          body: ''
-          photo: ''
-
-        @set('newPost', @get('store').createRecord('post'))
+          name: null
+          body: null
+          photo: null
 
         post.set('topic', topic)
         post.save()
