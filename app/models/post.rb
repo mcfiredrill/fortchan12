@@ -7,8 +7,7 @@ class Post < ActiveRecord::Base
 
   def validates_photo_or_post
     if body.blank? && photo_file_name.blank?
-      # TODO: remove all foliage terminology leftover from fort-tree 1.
-      errors.add(:leaf, "must have text or a picture, why would you want to make a
+      errors.add(:post, "must have text or a picture, why would you want to make a
         blank post? ;3")
     end
   end
