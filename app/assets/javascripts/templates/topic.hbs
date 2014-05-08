@@ -1,30 +1,5 @@
-<h2>reply</h2>
-<form {{action 'create' on="submit"}}>
-  {{#if isSaving}}
-    <p>saving post...</p>
-  {{/if}}
-  <div class="postarea_container">
-    <div class="postarea">
-      <table>
-        <tr>
-          <td class="fieldlabel">Name</td>
-          <td class="field">{{input type="text" value=name}}</td>
-        </tr>
-        <tr>
-          <td class="fieldlabel">Post</td>
-          <td class="field">{{textarea value=body}}</td>
-        </tr>
-        <tr>
-          <td class="fieldlabel">Photo</td>
-          <td class="field">{{view Fortchan12.UploadFile name="photo" file=photo}}</td>
-        </tr>
-      </table>
-    </div>
-    <div class="actions">
-      <button type="submit">Post</button>
-    </div>
-  </div>
-</form>
+<div class="replyheader">Posting mode: Reply</div>
+{{partial 'form'}}
 
 {{#each post in posts}}
   {{format-date post.createdAt}}

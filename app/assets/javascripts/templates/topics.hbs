@@ -1,31 +1,4 @@
-<h1>topics</h1>
-<h2>make a new topic</h2>
-<form {{action 'create' on="submit"}}>
-  {{#if isSaving}}
-    <p>saving post...</p>
-  {{/if}}
-  <div class="postarea_container">
-    <div class="postarea">
-      <table>
-        <tr>
-          <td class="fieldlabel">Name</td>
-          <td class="field">{{input type="text" value=name}}</td>
-        </tr>
-        <tr>
-          <td class="fieldlabel">Post</td>
-          <td class="field">{{textarea value=body}}</td>
-        </tr>
-        <tr>
-          <td class="fieldlabel">Photo</td>
-          <td class="field">{{view Fortchan12.UploadFile name="photo" file=photo}}</td>
-        </tr>
-      </table>
-    </div>
-    <div class="actions">
-      <button type="submit">Post</button>
-    </div>
-  </div>
-</form>
+{{partial 'form'}}
 
 {{#each}}
   <div class="topic">
