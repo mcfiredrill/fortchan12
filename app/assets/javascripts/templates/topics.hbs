@@ -10,16 +10,16 @@
   <button type="submit">Create</button>
 </form>
 
-{{#each topic in reversedTopics}}
+{{#each}}
   <div class="topic">
-    {{#each post in topic.posts}}
+    {{this.updatedAt}}
+    {{#each post in this.posts}}
       {{post.name}} says
       {{post.body}}
       <a {{bind-attr href="post.photo_url"}}><img {{bind-attr src="post.photo_thumb_url"}} /></a>
-      {{post.created_at}}
       <br />
     {{/each}}
-    {{#link-to 'topic' topic}}
+    {{#link-to 'topic' this}}
       Reply
     {{/link-to}}
   </div>
