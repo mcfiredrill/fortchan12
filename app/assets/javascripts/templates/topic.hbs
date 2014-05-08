@@ -10,6 +10,7 @@
 </form>
 
 {{#each post in posts}}
+  {{format-date post.createdAt}}
   {{post.name}} says
   {{post.body}}
   <a {{bind-attr href="post.photo_url"}}><img {{bind-attr src="post.photo_thumb_url"}} /></a>
