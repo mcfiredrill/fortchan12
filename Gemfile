@@ -10,9 +10,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'sdoc',          group: :doc, require: false
 gem 'spring',        group: :development
 gem 'active_model_serializers'
-gem 'ember-rails'
+gem 'ember-rails', '~> 0.15.0'
 gem "ember-data-source", "~> 1.0.0.beta.7"
-gem 'ember-source'
+gem 'ember-source', '~> 1.5.1.1'
 
 group :production do
   gem 'pg'
