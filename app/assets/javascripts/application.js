@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require handlebars
+//= require_tree ./lib
 
 //= require ember
 //= require ember-data

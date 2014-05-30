@@ -4,6 +4,7 @@ Fortchan12.TopicsController = Ember.ArrayController.extend
 
   actions:
     create: ->
+      crazyimage.start()
       post = @get('store').createRecord('post')
       post.setProperties(@getProperties(['name','body','photo']))
 
