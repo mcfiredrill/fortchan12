@@ -1,5 +1,6 @@
 var makePost = function(text) {
-  var store = Fortchan12.__container__.lookup('store:main'); var post = store.createRecord('post');
+  var store = Fortchan12.__container__.lookup('store:main');
+  var post = store.createRecord('post');
   post.setProperties({
     name: 'silly souls',
     body: text,
