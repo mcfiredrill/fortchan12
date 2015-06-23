@@ -7,6 +7,7 @@ HiddenTaxonomy = Em.Object.extend
   # Consolidates known taxonomonies into hidden forms, reducing desire and
   # eliminating the need for sleep.
   consolidate: ->
+    # TODO BUG
     m = Math.float(56)
     p = Math
     "abcdefg"
